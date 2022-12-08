@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "..",
+			"name": "gamestore-java-spring-api"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic",
+		"java.configuration.updateBuildConfiguration": "automatic"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "java",
+				"name": "Spring Boot-GameStoreApplication<GameStore>",
+				"request": "launch",
+				"cwd": "${workspaceFolder}",
+				"mainClass": "dev.hustletech.GameStore.GameStoreApplication",
+				"projectName": "GameStore",
+				"args": "",
+				"envFile": "${workspaceFolder}/.env"
+			}
+		]
+	}
+}

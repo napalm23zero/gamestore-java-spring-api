@@ -1,0 +1,36 @@
+{
+	"name": "gamestore-java-spring-api",
+	"dockerComposeFile": "./docker-compose.yaml",
+	"service": "gamestore-java-spring-api",
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "/bin/bash"
+	},
+	"runArgs": [
+		"-v",
+		"/var/run/docker.sock:/var/run/docker.sock"
+	],
+	"workspaceFolder": "/app",
+	"extensions": [
+		"aaron-bond.better-comments",
+		"esbenp.prettier-vscode",
+		"gabrielbb.vscode-lombok",
+		"GitHub.copilot",
+		"mhutchie.git-graph",
+		"mongodb.mongodb-vscode",
+		"Pivotal.vscode-boot-dev-pack",
+		"redhat.fabric8-analytics",
+		"redhat.java",
+		"redhat.vscode-xml",
+		"shengchen.vscode-checkstyle",
+		"SonarSource.sonarlint-vscode",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"vscjava.vscode-java-debug",
+		"vscjava.vscode-java-dependency",
+		"vscjava.vscode-java-pack",
+		"vscjava.vscode-java-test",
+		"vscjava.vscode-lombok",
+		"vscjava.vscode-maven",
+		"zhuangtongfa.material-theme"
+	],
+	"postStartCommand": "chmod 600 /app/.devcontainer/.ssh/key; eval \"$(ssh-agent -s)\"; ssh-add /app/.devcontainer/.ssh/key;"
+}
