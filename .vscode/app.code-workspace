@@ -7,20 +7,27 @@
 	],
 	"settings": {
 		"java.compile.nullAnalysis.mode": "automatic",
-		"java.configuration.updateBuildConfiguration": "automatic"
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"remote.restoreForwardedPorts": false,
+		"remote.autoForwardPorts": false,
+		"boot-java.scan-java-test-sources.on": true,
+		"remote.autoForwardPortsSource": "process",
 	},
 	"launch": {
 		"version": "0.2.0",
 		"configurations": [
 			{
 				"type": "java",
-				"name": "Spring Boot-GameStoreApplication<GameStore>",
+				"name": "Launch Current File",
 				"request": "launch",
-				"cwd": "${workspaceFolder}",
-				"mainClass": "dev.hustletech.GameStore.GameStoreApplication",
-				"projectName": "GameStore",
-				"args": "",
-				"envFile": "${workspaceFolder}/.env"
+				"mainClass": "${file}"
+			},
+			{
+				"type": "java",
+				"name": "Launch GameStoreApplication",
+				"request": "launch",
+				"mainClass": "dev.hustletech.gamestore.GameStoreApplication",
+				"projectName": "gamestore"
 			}
 		]
 	}

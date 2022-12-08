@@ -3,26 +3,30 @@
 	"dockerComposeFile": "./docker-compose.yaml",
 	"service": "gamestore-java-spring-api",
 	"settings": {
-		"terminal.integrated.defaultProfile.linux": "/bin/bash"
+		"terminal.integrated.defaultProfile.linux": "bash"
 	},
 	"runArgs": [
 		"-v",
 		"/var/run/docker.sock:/var/run/docker.sock"
 	],
+	"forwardPorts": [8080],
+	"portsAttributes": {
+		"8080": {
+			"label": "Application",
+			"onAutoForward": "ignore"
+		}
+	},
 	"workspaceFolder": "/app",
 	"extensions": [
 		"aaron-bond.better-comments",
 		"esbenp.prettier-vscode",
 		"gabrielbb.vscode-lombok",
-		"GitHub.copilot",
 		"mhutchie.git-graph",
 		"mongodb.mongodb-vscode",
 		"Pivotal.vscode-boot-dev-pack",
 		"redhat.fabric8-analytics",
 		"redhat.java",
 		"redhat.vscode-xml",
-		"shengchen.vscode-checkstyle",
-		"SonarSource.sonarlint-vscode",
 		"VisualStudioExptTeam.vscodeintellicode",
 		"vscjava.vscode-java-debug",
 		"vscjava.vscode-java-dependency",
