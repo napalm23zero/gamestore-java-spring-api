@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.hustletech</groupId>
-	<artifactId>gemestore</artifactId>
+	<artifactId>gamestore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>GameStore</name>
 	<description>GameStore API Template To use as exemple for future implementations</description>
