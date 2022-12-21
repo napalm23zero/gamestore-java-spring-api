@@ -3,7 +3,8 @@
 	"dockerComposeFile": "./docker-compose.yaml",
 	"service": "gamestore-java-spring-api",
 	"settings": {
-		"terminal.integrated.defaultProfile.linux": "bash"
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"remote.autoForwardPorts": false
 	},
 	"runArgs": [
 		"-v",
