@@ -9,10 +9,7 @@ services:
       - "8021:8080"
     volumes:
       - "../:/app"
-      # Linux
       - "${HOME}/.m2:/root/.m2"
-      # Windows
-      # - "D:\\Development\\.m2:/root/.m2"
       - "//var/run/docker.sock:/var/run/docker.sock"
     working_dir: /app
     stdin_open: true
@@ -20,6 +17,23 @@ services:
     mem_limit: 2g
     mem_reservation: 2g
     cpus: 0.5
+  gamestore-mongodb-database:
+    image : mongo:6.0.2
+    container_name: gamestore-mongodb-database
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=1q2w3e4r5t6y
+      - MONGO_INITDB_DATABASE=gamestore
+    volumes:
+      - './docker/db/mongo/data:/data/db'
+    ports:
+      - '57017:27017'
+    expose:
+      - '27017'
+    restart: unless-stopped
+
 networks:
   default:
     external: true

@@ -1,3 +1,11 @@
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+spring:
+  data:
+    mongodb:
+      username: root
+      database: gamestore
+      password: 1q2w3e4r5t6y
+      port: '27017'
+      host: gamestore-mongodb-database
