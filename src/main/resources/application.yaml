@@ -4,8 +4,9 @@ springdoc:
 spring:
   data:
     mongodb:
-      username: root
-      database: gamestore
-      password: 1q2w3e4r5t6y
-      port: '27017'
-      host: gamestore-mongodb-database
+      # username: 'root'
+      # database: 'gamestore'
+      # password: '1q2w3e4r5t6y'
+      # port: '27017'
+      # host: 'gamestore-mongodb-database'
+      uri: 'mongodb://root:1q2w3e4r5t6y@gamestore-mongodb-database:27017/gamestore?authSource=admin&readPreference=primary&ssl=false&directConnection=true'
